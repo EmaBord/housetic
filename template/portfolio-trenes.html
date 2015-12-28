@@ -1,7 +1,6 @@
 <div id="single-portfolio">
 	<div id="portfolio-details" class="container">
 		<a class="close-folio-item" href="#"><i class="fa fa-times"></i></a>
-		<img class="img-responsive" src="images/portfolio/trenes/mapa_detalle.png" alt="">
 		<div class="row">
 			<div class="col-sm-9">
 				<div class="project-info">
@@ -21,5 +20,38 @@
 				</div>  
 			</div>
 		</div>
+		<div align="center" class="embed-responsive embed-responsive-16by9">
+		    <a id="video-play">
+		    <video id="peaks-video" loop class="embed-responsive-item">
+			<source src=video/trenes.mp4 type=video/mp4>
+		    </video>
+		    <button id="idj-play-button" class="btn btn-xs"><i class="glyphicon glyphicon-play"></i></button>
+		    </a>
+		</div>
 	</div>
 </div>
+
+
+    <script>
+    var play = true;          
+    $('#video-play').click(function() {
+	if (play){ 
+	      	document.getElementById('peaks-video').play();
+	      	$('#idj-play-button').addClass('hide');      
+   	}else{
+	      document.getElementById('peaks-video').pause();
+	      $('#idj-play-button').removeClass('hide');
+	}
+	play = !play;
+    });
+
+    $('#peaks-video').on('ended', function() {
+      $('#idj-play-button').removeClass('hide');
+      $('peaks-video').load();
+    });
+    $('#portfolio-details .close-folio-item').click(function() {
+	 document.getElementById('peaks-video').pause();
+    });
+                            
+    </script>
+
