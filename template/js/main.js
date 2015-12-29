@@ -121,11 +121,14 @@ jQuery(function($) {
 
 	// Contact form
 	var form = $('#main-contact-form');
+	 var values = $(this).serialize();
 	form.submit(function(event){
 		event.preventDefault();
 		var form_status = $('<div class="form_status"></div>');
 		$.ajax({
 			url: $(this).attr('action'),
+			type: "POST",
+			data: values ,
 			beforeSend: function(){
 				form.prepend( form_status.html('<p><i class="fa fa-spinner fa-spin"></i> Enviando correo...</p>').fadeIn() );
 			}
