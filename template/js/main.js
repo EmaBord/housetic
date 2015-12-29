@@ -121,12 +121,12 @@ jQuery(function($) {
 
 	// Contact form
 	var form = $('#main-contact-form');
-	 var values = $(this).serialize();
 	form.submit(function(event){
 		event.preventDefault();
 		var form_status = $('<div class="form_status"></div>');
+		var values = $(this).serialize();
 		$.ajax({
-			url: $(this).attr('action'),
+			url: "sendemail.php",
 			type: "POST",
 			data: values ,
 			beforeSend: function(){
@@ -161,7 +161,7 @@ jQuery(function($) {
 			infowindow.open(map,marker);
 		});
 	}
-	google.maps.event.addDomListener(window, 'load', initialize_map);
+	//google.maps.event.addDomListener(window, 'load', initialize_map);
 	
 });
 
