@@ -131,7 +131,7 @@ jQuery(function($) {
 			}
 		}).done(function(data){
 			form_status.html('<p class="text-success">Gracias por contactarnos, a la brevedad responderemos su consulta.</p>').delay(4000).fadeOut();
-			this.reset();
+			document.getElementById("main-contact-form").reset();
 		});
 	});
 
