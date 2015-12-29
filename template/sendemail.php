@@ -11,8 +11,8 @@ $headers[] = "Content-type: text/plain; charset=iso-8859-1";
 $headers[] = "From: {$name} <{$from}>";
 $headers[] = "Reply-To: <{$from}>";
 $headers[] = "Subject: {$subject}";
-$headers[] = "X-Mailer: PHP/".phpversion()."\r\n";
-
+$headers[] = "X-Mailer: PHP/".phpversion();
+$headers = implode("\r\n", $headers);
 mail($to, $subject, $message, $headers);
 
 die;
