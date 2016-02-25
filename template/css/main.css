@@ -16,7 +16,7 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: #666;
-  background-color: #FAFAFA;
+  background-color: #fcfcfc;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -46,7 +46,7 @@ h3 {
 .parallax h4,
 .parallax h5,
 .parallax h6 {
-  color: #fff;
+  color: #ffffff;
 }
 
 .parallax input[type="text"],
@@ -294,7 +294,7 @@ section {
 }
 
 .our-services .col-sm-4:hover .service-icon {
-  background-color: #c7300d;
+  background-color: #0a758d;
 }
 
 .our-services .col-sm-4 {
@@ -329,7 +329,7 @@ section {
 
 #about-us h2 {
   margin-top: 0;
-  color: #fff;
+  color: #ffffff;
 }
 
 #about-us .lead {
@@ -359,10 +359,10 @@ section {
   font-weight: 600;
 }
 
-
 .progress .progress-bar.six-sec-ease-in-out {
   -webkit-transition: width 2s ease-in-out;
   transition:  width 2s ease-in-out;
+    color:#ffffff;
 }
 
 /*************************
@@ -895,6 +895,7 @@ ul.address {
   list-style: none;
   padding: 0;
   margin: 0;
+  color:#ffffff;
 }
 
 .contact-info ul li {
@@ -981,4 +982,9 @@ ul.address {
 #idj-play-button{
 	margin-top: 25%;
 }
-
+#contact {
+	color:#fff;
+}
+.adress{
+	color:#fff;
+}
